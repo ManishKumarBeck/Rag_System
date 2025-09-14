@@ -1,8 +1,22 @@
+# Core app
 streamlit
+python-dotenv
+
+# Langchain and OpenAI
 openai
 langchain
-langchain-community
 langchainhub
 langchain-openai
+langchain-community
+
+# Vector DB
 chromadb
-python-dotenv
+
+# Document loaders and parsing
+PyPDF2
+tqdm  # Often needed for PDF loading progress
+bs4   # Needed for WebBaseLoader (URL ingestion)
+html5lib  # Sometimes required by bs4
+
+# Optional: improve compatibility
+pypdf
