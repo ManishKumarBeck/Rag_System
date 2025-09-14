@@ -1,6 +1,12 @@
 import streamlit as st
 from rag_pipeline import ingest_urls, ingest_pdfs
 
+if 'loading' not in st.session_state:
+    st.session_state.loading = False
+
+if st.session_state.loading:
+    st.info("The app is waking up... please wait few seconds.")
+
 st.set_page_config(page_title="RAG Chatbot", layout="centered")
 st.title("📚 Retrieval-Augmented Chatbot")
 
