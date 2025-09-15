@@ -78,7 +78,7 @@ def ingest_pdfs(pdf_files, user_api_key=None, model_name="gpt-3.5-turbo", temper
             # Delete the temp file manually
             os.remove(temp_path)
 
-    # Text splitting, embedding, retrieval, RAG chain — same as before
+    # Text splitting, embedding, retrieval, RAG chain 
     splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
     chunks = splitter.split_documents(documents)
 
